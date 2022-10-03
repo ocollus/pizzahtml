@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<title>Bruno Pizza</title>
+
+<body>
+    <div id="cover"></div>
+    <div id="header">
+        <div class="header-ct">
+            <a class="logoic" href="index.html"><img src="assets/img/pzizaeria.png" alt="Bruno Pizza"></a>
+            <a class="brandname" href="index.html"><img src="assets/img/brandname.png" alt="Bruno Pizza"></a>
+            <div class="headingbtn reg headbtn">
+                <a href="registration.html">Register</a>
+            </div>
+            <div class="headingbtn ord headbtn">
+                <a href="order.html">Order Now</a>
+            </div>
+
+            <ul class="topnav">
+                <li id="home" onclick="clickingnav(this)"><a href="index.html">Home</a></li>
+                <li id="menu" onclick="clickingnav(this)"><a href="index.html#menulocation">Menu</a></li>
+                <li id="features" onclick="clickingnav(this)"><a href="#">Features</a></li>
+            </ul>
+            <button class="nav-expand" onclick="toggleNav()">
+                <span class=icon></span></button>
+            <div id="sidenav">
+                <ul>
+                    <li id="home" onclick="clickingnav(this)"><a href="index.html">Home</a></li>
+                    <li id="menu" onclick="clickingnav(this)"><a href="index.html#menulocation">Menu</a></li>
+                    <li id="features" onclick="clickingnav(this)"><a href="#">Features</a></li>
+                </ul>
+                <div class="sidebtn">
+                    <div class="headingbtn reg">
+                        <a href="registration.html">Register</a>
+                    </div>
+                    <div class="headingbtn ord">
+                        <a href="order.html">Order Now</a>
+                    </div>
+                </div>
+            </div>
+            <div id="blackscreen" onclick="toggleNav()"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="contain">
+            <a href="index.html#header">
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <span class="stars"></span>
+                            <h2 class="java">Attribute Scrolling</h2>
+                            <p class="java">Click/Tap the item in navbar to scroll to specific part of the page</p>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <h2>01</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="index.html#header">
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <span class="stars"></span>
+                            <h2 class="java">Active Attribute</h2>
+                            <p class="java">The last item clicked on navbar is the active item</p>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <h2>02</h2>
+                    </div>
+                </div>
+            </a>
+            <a href="registration.html">
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <span class="stars"></span>
+                            <h2 class="java">Error Validation</h2>
+                            <p class="java">Search for error in form and report to the head of the div</p>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <h2>03</h2>
+                    </div>
+                </div>
+            </a>
+            <a href="registration.html">
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <span class="stars"></span>
+                            <h2 class="java">Div Appear When Clicked</h2>
+                            <p class="java">Hidden Div Appear When Checked a type:radio option</p>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <h2>04</h2>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="conta">
+            <div class="inf">
+                <div class="head">Bruno Pizzeria</div>
+                <div class="para">
+                </div>
+                <div class="media">
+                    <a href="https://www.facebook.com/"><img class="img1" src="assets/img/Group.svg" alt=""></a>
+                    <a href="https://www.google.com/"><img src="assets/img/Group-2.svg" alt=""></a>
+                    <a href="https://www.instagram.com/"><img src="assets/img/Group-1.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="select">
+                <ul class="row1">
+                    <li><a href="">About Us</a></li>
+                    <li><span href="">Address: Trang Tien, Hoang Kiem, Hanoi</span></li>
+                    <li><span href="">Hotline</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="funct.js"></script>
+
+</body>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<title>Bruno Pizza</title>
+
+<body>
+    <div id="cover"></div>
+    <div id="header">
+        <div class="header-ct">
+            <a class="logoic" href="index.html"><img src="assets/img/pzizaeria.png" alt="Bruno Pizza"></a>
+            <a class="brandname" href="index.html"><img src="assets/img/brandname.png" alt="Bruno Pizza"></a>
+            <div class="headingbtn reg headbtn">
+                <a href="registration.html">Register</a>
+            </div>
+            <div class="headingbtn ord headbtn">
+                <a href="order.html">Order Now</a>
+            </div>
+
+            <ul class="topnav">
+                <li id="home" onclick="clickingnav(this)"><a href="#">Home</a></li>
+                <li id="menu" onclick="clickingnav(this)"><a href="#menulocation">Menu</a></li>
+                <li id="features" onclick="clickingnav(this)"><a href="feature.html">Features</a></li>
+            </ul>
+            <button class="nav-expand" onclick="toggleNav()">
+                <span class=icon></span></button>
+            <div id="sidenav">
+                <ul>
+                    <li id="home" onclick="clickingnav(this)"><a href="#">Home</a></li>
+                    <li id="menu" onclick="clickingnav(this)"><a href="#menulocation">Menu</a></li>
+                    <li id="features" onclick="clickingnav(this)"><a href="feature.html">Features</a></li>
+                </ul>
+                <div class="sidebtn">
+                    <div class="headingbtn reg">
+                        <a href="registration.html">Register</a>
+                    </div>
+                    <div class="headingbtn ord">
+                        <a href="order.html">Order Now</a>
+                    </div>
+                </div>
+            </div>
+            <div id="blackscreen" onclick="toggleNav()"></div>
+        </div>
+    </div>
+    <div id="intr">
+        <div>
+            <div class="imgintr">
+                <img src="assets/img/pizzaintr.jpg" alt="">
+            </div>
+            <div class="introduction">
+                <div class="textcont">
+                    <h1>Welcome to Bruno Pizzeria</h1>
+                    <p>Located in Trang Tien street, the center of Hanoi City, Vietnam, Bruno Pizzeria has an appealing
+                        facade and a very good-looking, highlighted entrance, promised to attract any pizza lover by the
+                        first look. As you walk into the pizzeria, you will be overwhelmed by the friendly yet
+                        professional attitude of our staff team and the manager as well. The neat and clean space, the
+                        simple but stunning layout, the regularly checked and renewed furniture, the good-looking and
+                        also good-tasting pizzas, all will create an unforgettable food experience for you, our lovely
+                        customers!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="aboutus">
+        <div class="aboutus-content">
+        <div class="head1">About Us?</div>
+        <div class="head2">The Bruno Pizzeria was founded by Mr. Bruno, an American pizza-lover who has been in Vietnam for 10 years. In the early days, the pizzeria was just a small van selling pizza in the trunk. Three years later, through talent and experiences gathered from hard working, Mr. Bruno decided to open the whole pizzeria in the center of the capital of Vietnam. The next three years was a very hard time for Mr. Bruno because of the slightly unreasonable prices, the unstable income, the hard-to-get market tastes, but as time went by, with the help of the hospitality Vietnamese people, he managed to overcame difficulties to make the flawless pizzeria like nowadays.</div>
+    </div>
+    </div>
+    <div id="menulocation">
+        <div class="titlemenu">Menu</div>
+            <div class="content">
+                <img src="assets/img/Meat-lovers-pizza.jpg" alt="">
+                <div class="grtext">
+                    <div class="head">Teriyaki Chicken Pizza</div>
+                    <div class="para">Mushshrooms, chicken and Japanese Teriyaki sauce.</div>
+                </div>
+            </div>
+            <div class="content">
+                <img src="assets/img/pepperonispizza.jpg" alt="">
+                <div class="grtext">
+                    <div class="head">Pepperonis Pizza</div>
+                    <div class="para">Pepperonis, Wisconsin cheese and tomato sauce</div>
+                </div>
+            </div>
+            <div class="content">
+                <img src="assets/img/seafood.jpg" alt="">
+                <div class="grtext">
+                    <div class="head">Marinara Seafood Pizza</div>
+                    <div class="para">American tomato sauce, squid, shrimp, Basa fish, onion, corn and Mozzarella cheese</div>
+                </div>
+            </div>
+
+            <div class="content">
+                <img src="assets/img/teriyakichicken.jpg" alt="">
+                <div class="grtext">
+                    <div class="head">Meat Lovers Pizza</div>
+                    <div class="para">Mozzarella cheese, tomato sauce, sausages, spicy sausages, smoked pork and smoked bacon</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <div id="footer">
+        <div class="conta">
+            <div class="inf">
+                <div class="head">Bruno Pizzeria</div>
+                <div class="para">
+                </div>
+                <div class="media">
+                    <a href="https://www.facebook.com/"><img class="img1" src="assets/img/Group.svg" alt=""></a>
+                    <a href="https://www.google.com/"><img src="assets/img/Group-2.svg" alt=""></a>
+                    <a href="https://www.instagram.com/"><img src="assets/img/Group-1.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="select">
+                <ul class="row1">
+                    <li><a href="">About Us</a></li>
+                    <li><span href="">Address: Trang Tien, Hoang Kiem, Hanoi</span></li>
+                    <li><span href="">Hotline</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="funct.js"></script>
+
+</body>
+
+</html>

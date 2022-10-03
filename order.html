@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<title>Bruno Pizzeria</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<body>
+    <div id="cover"></div>
+    <div id="header">
+        <div class="header-ct">
+            <a class="logoic" href="index.html"><img src="assets/img/pzizaeria.png" alt="Bruno Pizza"></a>
+            <a class="brandname" href="index.html"><img src="assets/img/brandname.png" alt="Bruno Pizza"></a>
+            <div class="headingbtn reg headbtn">
+                <a href="registration.html">Register</a>
+            </div>
+            <div class="headingbtn ord headbtn headingbtnactive">
+                <a href="order.html">Order Now</a>
+            </div>
+            <ul class="topnav">
+                <li id="home" onclick="clickingnav(this)"><a href="index.html">Home</a></li>
+                <li id="menu" onclick="clickingnav(this)"><a href="index.html#menulocation">Menu</a></li>
+                <li id="features" onclick="clickingnav(this)"><a href="feature.html">Features</a></li>
+            </ul>
+            <button class="nav-expand" onclick="toggleNav()">
+                <span class=icon></span></button>
+            <div id="sidenav">
+                <ul>
+                    <li id="home" onclick="clickingnav(this)"><a href="index.html">Home</a></li>
+                    <li id="menu" onclick="clickingnav(this)"><a href="index.html#menulocation">Menu</a></li>
+                    <li id="features" onclick="clickingnav(this)"><a href="feature.html">Features</a></li>
+                </ul>
+                <div class="sidebtn">
+                    <div class="headingbtn reg">
+                        <a href="registration.html">Register</a>
+                    </div>
+                    <div class="headingbtn ord headingbtnactive">
+                        <a href="order.html">Order Now</a>
+                    </div>
+                </div>
+            </div>
+            <div id="blackscreen" onclick="toggleNav()"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <form>
+            <div class="regform">
+                <h2>Order</h2>
+                <p>Please fill in this form to place your order(s).</p>
+                <hr>
+                <ul class="errorMessages"></ul>
+                <div>
+                    <input type="radio" id="delivery" name="methoddeli" value="delivery" onclick="showhidden()"
+                        required>
+                    <label for="delivery">Delivery</label>
+                    <input type="radio" id="pickup" name="methoddeli" value="pickup" onclick="showhidden()" required>
+                    <label for="pickup">Pickup</label><br>
+                </div>
+                <div id="deliveryoption" style="display:none">
+                    <label for="delinoworlater"><b>Delivery Options</b></label><br>
+                    <input type="radio" id="delinow" name="delioption" value="deliverynow" onclick="showhidden2()"
+                        checked>
+                    <label for="delinow">Same day delivery</label>
+                    <input type="radio" id="pickupdate" name="delioption" value="deliverylater" onclick="showhidden2()">
+                    <label for="pickupdate">Pickup Date</label>
+                    <input type="date" name="pickupdate" id="datedeli" style="display: none"><br>
+                </div>
+                <label for="deliveryaddress"><b>Delivery Address</b></label>
+                <input type="text" placeholder="Enter Delivery Address" name="deliveryaddress" id="deliveryaddress"
+                    required>
+                <br>
+                <label for="billingaddress"><b>Billing Address</b></label>
+                <input type="text" placeholder="Enter Billing Address" name="billingaddress" id="billingaddress"
+                    required>
+                <label for="postcode"><b>Postcode</b></label>
+                <input type="text" minlength="4" maxlength="4" inputmode="numeric" placeholder="Enter Postcode"
+                    name="postcode" id="postcode" required oninvalid="this.setCustomValidity('Must be 4-digit')"
+                    oninput="setCustomValidity('')">
+                <br>
+                <label for="phone"><b>Contact Number</b></label><br>
+                <input type="text" placeholder="Enter Contact Number" name="phone" id="phone" inputmode="numeric"
+                    minlength="10" maxlength="10" required>
+                <br>
+                <label for="emailforreceipt"><b>Email for Receipt</b></label>
+                <input type="text" placeholder="Enter Email for Receipt" name="emailforreceipt" id="emailforreceipt"
+                    required>
+                <br>
+                <label for="payonpickuporonline"><b>Payment Method</b></label><br>
+                <input type="radio" id="payonpickup" name="paymethod" value="payonpickup"  onclick="showhidden3()" required>
+                <label for="payonpickup">Pay on Pickup</label>
+                <input type="radio" id="payonline" name="paymethod" value="payonline" onclick="showhidden3()" required>
+                <label for="payonline">Pay Online</label><br>
+                <!-- Creditcard -->
+                <div id="creditcard"  style="display:none">
+                    <div class="formcontainer">
+                        <div class="field-container">
+                            <label for="name">Name</label>
+                            <input id="name" maxlength="20" type="text">
+                        </div>
+                        <div class="field-container">
+                            <label for="cardnumber">Card Number</label>
+                            <input id="cardnumber" type="text" pattern="[0-9]*" inputmode="numeric">
+                            <svg id="ccicon" class="ccicon" width="750" height="471" viewBox="0 0 750 471" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            </svg>
+                        </div>
+                        <div class="field-container">
+                            <label for="expirationdate">Expiration (mm/yy)</label>
+                            <input id="expirationdate" type="text" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                        <div class="field-container">
+                            <label for="securitycode">CCV</label>
+                            <input id="securitycode" type="text" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <button type="submit" class="submitorder" value="Verify">Submit Order(s)</button>
+            </div>
+        </form>
+        <div></div>
+    </div>
+    <div id="footer">
+        <div class="conta">
+            <div class="inf">
+                <div class="head">Bruno Pizzeria</div>
+                <div class="para">
+                </div>
+                <div class="media">
+                    <a href="https://www.facebook.com/"><img class="img1" src="assets/img/Group.svg" alt=""></a>
+                    <a href="https://www.google.com/"><img src="assets/img/Group-2.svg" alt=""></a>
+                    <a href="https://www.instagram.com/"><img src="assets/img/Group-1.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="select">
+                <ul class="row1">
+                    <li><a href="">About Us</a></li>
+                    <li><span href="">Address: Trang Tien, Hoang Kiem, Hanoi</span></li>
+                    <li><span href="">Hotline</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/3.4.0/imask.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="funct.js"></script>
+</body>
+
+</html>

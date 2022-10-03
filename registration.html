@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<title>Register</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+
+
+<body>
+    <div id="cover"></div>
+    <div id="header">
+        <div class="header-ct">
+            <a class="logoic" href="index.html"><img src="assets/img/pzizaeria.png" alt="Bruno Pizza"></a>
+            <a class="brandname" href="index.html"><img src="assets/img/brandname.png" alt="Bruno Pizza"></a>
+            <div class="headingbtn reg headbtn headingbtnactive">
+                <a href="registration.html">Register</a>
+            </div>
+            <div class="headingbtn ord headbtn">
+                <a href="order.html">Order Now</a>
+            </div>
+            <ul class="topnav">
+                <li id="home" onclick="clickingnav(this)"><a href="index.html">Home</a></li>
+                <li id="menu" onclick="clickingnav(this)"><a href="index.html#menulocation">Menu</a></li>
+                <li id="features" onclick="clickingnav(this)"><a href="feature.html">Features</a></li>
+            </ul>
+            <button class="nav-expand" onclick="toggleNav()">
+                <span class=icon></span></button>
+            <div id="sidenav">
+                <ul>
+                    <li id="home" onclick="clickingnav(this)"><a href="index.html">Home</a></li>
+                    <li id="menu" onclick="clickingnav(this)"><a href="index.html#menulocation">Menu</a></li>
+                    <li id="features" onclick="clickingnav(this)"><a href="feature.html">Features</a></li>
+                </ul>
+                <div class="sidebtn">
+                    <div class="headingbtn reg headingbtnactive">
+                        <a href="registration.html">Register</a>
+                    </div>
+                    <div class="headingbtn ord">
+                        <a href="order.html">Order Now</a>
+                    </div>
+                </div>
+            </div>
+            <div id="blackscreen" onclick="toggleNav()"></div>
+        </div>
+    </div>
+    <div class="container">
+        <form>
+            <div class="regform">
+                <h2>Register</h2>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+                <ul class="errorMessages"></ul>
+                <div>
+                    <label for="username"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="username" id="username" required>
+                </div>
+                <div>
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" id="email" required=""
+                        oninvalid="this.setCustomValidity('Please enter valid email')" oninput="setCustomValidity('')">
+                </div>
+                <div>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" id="psw" pattern=".{8,}" required
+                        title="8 characters minimum">
+                </div>
+                <div>
+                    <label for="psw-repeat"><b>Repeat Password</b></label>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat"
+                        pattern=".{8,}">
+                </div>
+                <label for="gender"><b>Please select your gender</b></label>
+                <select name="gender" id="gender" required>
+                    <option value="" style="display: none;"></option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <p><b>Favourite Pizza</b></p>
+                <label><input type="checkbox" name="pizza1"> Pizza #1</label>
+                <label><input type="checkbox" name="pizza2"> Pizza #2</label>
+                <label><input type="checkbox" name="pizza3"> Pizza #3</label>
+                <label><input type="checkbox" name="pizza4"> Pizza #4</label>
+
+                <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+                <button type="submit" class="registerbtn">Register</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+    <div id="footer">
+        <div class="conta">
+            <div class="inf">
+                <div class="head">Bruno Pizzeria</div>
+                <div class="para">
+                </div>
+                <div class="media">
+                    <a href="https://www.facebook.com/"><img class="img1" src="assets/img/Group.svg" alt=""></a>
+                    <a href="https://www.google.com/"><img src="assets/img/Group-2.svg" alt=""></a>
+                    <a href="https://www.instagram.com/"><img src="assets/img/Group-1.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="select">
+                <ul class="row1">
+                    <li><a href="">About Us</a></li>
+                    <li><span href="">Address: Trang Tien, Hoang Kiem, Hanoi</span></li>
+                    <li><span href="">Hotline</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="funct.js"></script>
+
+</body>
+
+
+</html>
